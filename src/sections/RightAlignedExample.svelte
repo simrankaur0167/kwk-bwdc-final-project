@@ -107,31 +107,23 @@
 
         {#snippet scrolly()}
             <ArticleText>
-                <strong>Welcome to the KWK Data Scrollytelling Template!</strong
-                >
-            </ArticleText>
-
-            <ArticleText>
-                This is a <strong>basic example</strong> of how you might create
-                a scrollytelling piece using Svelte and Highcharts.
-            </ArticleText>
-
-            <ArticleText>
-                You can use this template as a <strong>starting point</strong>
-                for your project.
+                Behind this disparity is a gap in educational attainment. Adults with advanced degrees generally have higher salaries, which gives them access to high-cost-of-living areas. 
                 <br /><br />
-                Or, if you want to build something from scratch, you can use it as
-                a <strong>reference</strong> for specific functionality.
+                Source: <a href="https://www.bls.gov/careeroutlook/2023/data-on-display/education-pays.htm">U.S. Bureau of Labor Statistics</a>
             </ArticleText>
 
             <ArticleText>
-                This is <strong>just one way</strong> that scrollytelling can
-                look.
+                In Manhattan, where 64% of adults aged 25 and older have a bachelor’s degree, the median home value is $1.16 million. In contrast, in Orleans County, where only 17.5% of adults aged 25 and older hold a bachelor’s degree, the median home value is $144,500.
                 <br /><br />
-                <strong>
-                    If you use this template, be sure to modify it and make it
-                    your own!
-                </strong>
+                Sources: <a href="https://blackwealthdata.org/wealth-indicator">Black Wealth Data Center - Wealth Indicators</a>, <a href="https://public.tableau.com/shared/C6P223WYT?:display_count=n&:origin=viz_share_link&:embed=y">Black Wealth Data Center - Bachelor’s Degree Attainment: Local Level</a>, <a href="https://hdpulse.nimhd.nih.gov/data-portal/social/table?age=081&age_options=age25_1&demo=00006&demo_options=education_3&race=00&race_options=race_7&sex=0&sex_options=sexboth_1&socialtopic=020&socialtopic_options=social_6&statefips=36&statefips_options=area_states">National Institute on Minority Health and Health Disparities</a>
+            </ArticleText>
+
+            <ArticleText>
+                As a result of this divide, the lifestyles—and consequently, the health outcomes—of the most and least educated New Yorkers vary greatly.
+            </ArticleText>
+
+            <ArticleText>
+                To better understand this phenomenon, we can compare the three most educated counties—Manhattan (New York County), Tompkins, and Westchester—with the three least educated ones—Orleans, Wyoming, and Chenango.
             </ArticleText>
         {/snippet}
     </Scroller>

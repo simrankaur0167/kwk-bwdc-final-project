@@ -5,6 +5,24 @@
     import Scroller from "../lib/Scroller.svelte";
     import ArticleText from "../lib/ArticleText.svelte";
 
+    const options1 = {
+    threshold: [0.85, 0.95],
+  };
+
+  const callback = (entries, observer) => {
+    entries.forEach((entry) => {
+      const elem = entry.target;
+
+      if (entry.intersectionRatio >= 1) {
+        // "active" state
+        elem.style.backgroundColor = "#e3ff00";
+      } else if (entry.intersectionRatio < 1) {
+        // "inactive" state
+        elem.style.backgroundColor = "#888888";
+      }
+    });
+  };
+
     const series = [
         {
             name: "Group 1",
@@ -101,26 +119,51 @@
 
         {#snippet scrolly()}
             <ArticleText>
-                You might notice that this basic template doesn't have certain
-                features that are common in scrollytelling.
+                A child born in Manhattan, Tompkins, or Westchester has a higher chance of survival. Infant mortality rates are lower in highly educated counties.
+                <br /><br />
+                Source: <a href="https://www.health.ny.gov/statistics/vital_statistics/2021/table45.htm">New York State Department of Health</a>
             </ArticleText>
 
             <ArticleText>
-                For example, you might want a component that doesn't feature a
-                sticky component at all. Or a component that is solely a sticky
-                component.
+                They will also be exposed to less secondhand smoke, as smoking rates are lower in these areas.
+                <br /><br />
+                Source: <a href="https://www.health.ny.gov/prevention/tobacco_control/reports/statshots/volume15/n2_smoking_among_adults.pdf">New York State Department of Health</a>
             </ArticleText>
 
             <ArticleText>
-                You might also want to add more interactivity or gamify parts of
-                your scrollytelling piece.
+                Compared to their peers in Orleans, Wyoming, and Chenango, they would have access to a diverse array of nutritious and well-prepared foods, as highly educated areas have a higher density of specialty food stores.
+                <br /><br />
+                Source: <a href="https://www.ers.usda.gov/data-products/food-environment-atlas/go-to-the-atlas">U.S. Department of Agriculture</a>
             </ArticleText>
 
             <ArticleText>
-                <strong>
-                    It's up to you to research how to create the effects and
-                    functionality that you envision!
-                </strong>
+                Conversely, lower educated areas generally have a higher density of convenience stores, which mostly carry heavily processed, high calorie foods.
+                <br /><br />
+                Source: <a href="https://www.ncco.com/blog/foodservice-trends/how-convenience-stores-are-helping-fight-food-deserts/">National Checking Company</a>
+            </ArticleText>
+
+            <ArticleText>
+                Children in highly educated areas will find their area’s largest city to be fairly walkable or bikeable, creating a natural environment for physical activity. Lower educated areas are primarily car-dependent.
+                <br /><br />
+                Source: <a href="https://www.walkscore.com/">Walk Score</a>
+            </ArticleText>
+
+            <ArticleText>
+                Due to these factors, residents of lower educated areas have higher rates of diabetes and heart disease.
+                <br /><br />
+                Source: <a href="https://www.health.ny.gov/community/health_equity/reports/county/">New York State Department of Health</a>
+            </ArticleText>
+
+            <ArticleText>
+                If a resident of Orleans, Wyoming, or Chenango were to pursue higher education, they would most likely leave their county of origin. Upstate New York, which includes these counties, has one of the largest outflows of educated workers in the United States. This outflow perpetuates cycles of low educational attainment and poor health outcomes.
+                <br /><br />
+                Source: <a href="https://www.newyorkfed.org/medialibrary/media/research/regional_economy/glance/upstate_glance1_07.pdf">Federal Reserve Bank of New York</a>
+            </ArticleText>
+
+            <ArticleText>
+                Whether they become a finance bro/girlie in Manhattan, buy a cute suburban home by the Hudson in Westchester, or teach at Cornell in Tompkins County, they’re likely to enjoy smoke-free environments, a wider range of nutritious food options, and walkable communities—all of which contribute to longer life expectancy.
+                <br /><br />
+                Source: <a href="https://www.cdc.gov/nchs/nvss/usaleep/usaleep.html">Centers for Disease Control and Prevention - National Center for Health Statistics</a>
             </ArticleText>
         {/snippet}
     </Scroller>
