@@ -57,7 +57,7 @@
                 {#if duckIsVisible}
                     <img
                         class="duck-img"
-                        src="duck.png"
+                        src="map1.png"
                         alt="KWK rubber duck!"
                         in:fly={{ y: 200, duration: 2000 }}
                         out:fade
@@ -131,6 +131,6 @@
 
 <style>
     .duck-img {
-        margin: 0px auto;
+        width: 12px;
     }
 </style>
