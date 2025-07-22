@@ -6,7 +6,7 @@
 <div>
   <Scroller layout="right">
     {#snippet sticky()}
-      <img class="map-img" src="map1.png" alt="Map of NYS" />
+      <img class="map-img" src="map1.png" alt="Map of NYS showing Orleans and Manhattan" />
     {/snippet}
 
     {#snippet scrolly()}

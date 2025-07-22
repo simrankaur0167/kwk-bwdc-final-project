@@ -16,7 +16,7 @@
         },
     },
     title: {
-        text: "Earnings by educational attainment",
+        text: "Walk score by largest city",
     },
     plotOptions: {
         column: {
@@ -35,27 +35,24 @@
     },
     yAxis: {
         title: {
-            text: "Median usual weekly earnings in USD",
+            text: "Walkability based on the distance to nearby places and pedestrian friendliness",
         },
     },
     series: [
         {
-            color: "black",
-            name: "Earnings in USD",
+            color: "#34495e",
+            name: "Walk score",
             data: [
-                { name: "Doctoral degree", y: 2083 },
-                { name: "Professional degree", y: 2080 },
-                { name: "Master’s degree", y: 1661 },
-                { name: "Bachelor’s degree", y: 1432 },
-                { name: "Associate’s degree", y: 1005 },
-                { name: "Some college, no degree", y: 935 },
-                { name: "High school diploma", y: 853 },
-                { name: "Less than a high school diploma", y: 682 },
+                { name: "Manhattan (NYC)", y: 88 },
+                { name: "Tompkins (Ithaca)", y: 72 },
+                { name: "Westchester (Yonkers)", y: 69 },
+                { name: "Chenango (Greene)", y: 0, color: "#8c0d0b" },
+                { name: "Wyoming (Bennington)", y: 0, color: "#8c0d0b" },
+                { name: "Orleans", y: 25, color: "#8c0d0b" },
             ],
         },
     ],
 };
-
 </script>
 
 <div>
@@ -63,14 +60,21 @@
         {#snippet sticky()}
             <div class="chart">
                 <Chart {options} highcharts={Highcharts} />
+                <p>Both Greene in Chenango and Bennington in Wyoming have a walk score of 0, meaning all errands require a car.</p>
             </div>
         {/snippet}
         {#snippet scrolly()}
              <ArticleText>
-                Behind this disparity is a gap in educational attainment. Adults with advanced degrees generally have higher salaries, which gives them access to high-cost-of-living areas. 
+                Children in highly educated areas will find their county’s largest city to be fairly walkable or bikeable, creating a natural environment for physical activity. Lower educated areas are primarily car-dependent.
                 <br /><br />
-                Source: <a href="https://www.bls.gov/careeroutlook/2023/data-on-display/education-pays.htm">U.S. Bureau of Labor Statistics</a>
+                Source: <a href="https://www.walkscore.com/">Walk Score</a>
             </ArticleText>
         {/snippet}
     </Scroller>
 </div>
+
+<style>
+    p {
+        font-family: Georgia;
+    }
+</style>

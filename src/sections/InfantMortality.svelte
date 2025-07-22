@@ -16,7 +16,7 @@
         },
     },
     title: {
-        text: "Infant mortality rate",
+        text: "Infant mortality rate by county",
     },
     plotOptions: {
         column: {
@@ -35,7 +35,7 @@
     },
     yAxis: {
         title: {
-            text: "Infant mortality rate",
+            text: "Deaths under 1 year of age per 1,000 live births",
         },
     },
     series: [
@@ -46,9 +46,9 @@
                 { name: "Manhattan", y: 2.8 },
                 { name: "Tompkins", y: 1.4 },
                 { name: "Westchester", y: 2.8 },
-                { name: "Chenango", y: 6.3 },
-                { name: "Wyoming", y: 8.4 },
-                { name: "Orleans.", y: 0.0 },
+                { name: "Chenango", y: 6.3, color: "#8c0d0b" },
+                { name: "Wyoming", y: 8.4, color: "#8c0d0b" },
+                { name: "Orleans", y: 0.0, color: "#8c0d0b" },
             ],
         },
     ],
@@ -62,6 +62,7 @@
             <div class="chart">
                 <Chart {options} highcharts={Highcharts} />
             </div>
+            <p>While Orleans County reports an infant mortality rate of 0.0 — an outlier among lower education areas — this may be due to small sample sizes or underreporting. In contrast, other counties with similarly low education levels, like Chenango and Wyoming, report much higher rates (6.3 and 8.4, respectively).</p>
         {/snippet}
         {#snippet scrolly()}
              <ArticleText>
@@ -72,3 +73,9 @@
         {/snippet}
     </Scroller>
 </div>
+
+<style>
+    p {
+        font-family: Georgia;
+    }
+</style>

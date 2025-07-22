@@ -16,7 +16,7 @@
         },
     },
     title: {
-        text: "Earnings by educational attainment",
+        text: "Density of specialty food stores by county",
     },
     plotOptions: {
         column: {
@@ -35,27 +35,24 @@
     },
     yAxis: {
         title: {
-            text: "Median usual weekly earnings in USD",
+            text: "Specialized food stores per 1,000 residents",
         },
     },
     series: [
         {
-            color: "black",
-            name: "Earnings in USD",
+            color: "#34495e",
+            name: "# per 1,000 residents",
             data: [
-                { name: "Doctoral degree", y: 2083 },
-                { name: "Professional degree", y: 2080 },
-                { name: "Master’s degree", y: 1661 },
-                { name: "Bachelor’s degree", y: 1432 },
-                { name: "Associate’s degree", y: 1005 },
-                { name: "Some college, no degree", y: 935 },
-                { name: "High school diploma", y: 853 },
-                { name: "Less than a high school diploma", y: 682 },
+                { name: "Manhattan", y: 0.26 },
+                { name: "Tompkins", y: 0.1 },
+                { name: "Westchester", y: 0.15 },
+                { name: "Chenango", y: 0.04, color: "#8c0d0b" },
+                { name: "Wyoming", y: 0.02, color: "#8c0d0b" },
+                { name: "Orleans", y: 0.05, color: "#8c0d0b" },
             ],
         },
     ],
 };
-
 </script>
 
 <div>
@@ -67,9 +64,9 @@
         {/snippet}
         {#snippet scrolly()}
              <ArticleText>
-                Behind this disparity is a gap in educational attainment. Adults with advanced degrees generally have higher salaries, which gives them access to high-cost-of-living areas. 
+                Compared to their peers in Orleans, Wyoming, and Chenango, they would have access to a diverse array of nutritious and well-prepared foods, as highly educated areas have a higher density of specialty food stores.
                 <br /><br />
-                Source: <a href="https://www.bls.gov/careeroutlook/2023/data-on-display/education-pays.htm">U.S. Bureau of Labor Statistics</a>
+                Source: <a href="https://www.ers.usda.gov/data-products/food-environment-atlas/go-to-the-atlas">U.S. Department of Agriculture</a>
             </ArticleText>
         {/snippet}
     </Scroller>

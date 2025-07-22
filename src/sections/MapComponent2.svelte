@@ -6,7 +6,11 @@
 <div>
   <Scroller layout="right">
     {#snippet sticky()}
-      <img class="map-img" src="map2.png" alt="Map of NYS" />
+      <img
+        class="map-img"
+        src="map2.png"
+        alt="Map of NYS showing Manhattan, Tompkins, Westchester, Orleans, Wyoming, and Chenango"
+      />
     {/snippet}
 
     {#snippet scrolly()}

@@ -23,7 +23,7 @@
   const text =
     "Access to education is extremely important, as it can promote upward social mobility and increase the chances of living a healthy, long, and satisfying life. To learn more or get involved, consider visiting the resources below! Together, we can ensure all New Yorkers have the opportunity to reach their full potential. ☺️";
   const citation =
-    '<a href="https://equityinedny.edtrust.org/">New York Equity Coalition</a>, <a href="https://unitedwaynyc.org/programs/education/">United Way of New York City</a>, <a href="https://equityinedny.edtrust.org/">The Education Trust</a>';
+    '<a href="https://equityinedny.edtrust.org/">New York Equity Coalition</a>, <a href="https://unitedwaynyc.org/programs/education/">United Way of New York City</a>, <a href="https://newyork.edtrust.org/">The Education Trust</a>';
 </script>
 
 <TextBox {text} {citation} />

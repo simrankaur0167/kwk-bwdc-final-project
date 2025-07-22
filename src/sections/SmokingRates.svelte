@@ -16,7 +16,7 @@
         },
     },
     title: {
-        text: "Earnings by educational attainment",
+        text: "Smoking rates by county",
     },
     plotOptions: {
         column: {
@@ -35,27 +35,24 @@
     },
     yAxis: {
         title: {
-            text: "Median usual weekly earnings in USD",
+            text: "% of adults who smoke",
         },
     },
     series: [
         {
-            color: "black",
-            name: "Earnings in USD",
+            color: "#34495e",
+            name: "% of adults who smoke",
             data: [
-                { name: "Doctoral degree", y: 2083 },
-                { name: "Professional degree", y: 2080 },
-                { name: "Master’s degree", y: 1661 },
-                { name: "Bachelor’s degree", y: 1432 },
-                { name: "Associate’s degree", y: 1005 },
-                { name: "Some college, no degree", y: 935 },
-                { name: "High school diploma", y: 853 },
-                { name: "Less than a high school diploma", y: 682 },
+                { name: "Manhattan", y: 9.8 },
+                { name: "Tompkins", y: 8.9 },
+                { name: "Westchester", y: 5.6 },
+                { name: "Chenango", y: 28.5, color: "#8c0d0b" },
+                { name: "Wyoming", y: 22.3, color: "#8c0d0b" },
+                { name: "Orleans", y: 14.9, color: "#8c0d0b" },
             ],
         },
     ],
 };
-
 </script>
 
 <div>
@@ -67,9 +64,9 @@
         {/snippet}
         {#snippet scrolly()}
              <ArticleText>
-                Behind this disparity is a gap in educational attainment. Adults with advanced degrees generally have higher salaries, which gives them access to high-cost-of-living areas. 
+                They may also be exposed to less secondhand smoke, as smoking rates are lower in these areas.
                 <br /><br />
-                Source: <a href="https://www.bls.gov/careeroutlook/2023/data-on-display/education-pays.htm">U.S. Bureau of Labor Statistics</a>
+                Source: <a href="https://www.health.ny.gov/prevention/tobacco_control/reports/statshots/volume15/n2_smoking_among_adults.pdf">New York State Department of Health</a>
             </ArticleText>
         {/snippet}
     </Scroller>

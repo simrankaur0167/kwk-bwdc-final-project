@@ -16,7 +16,7 @@
         },
     },
     title: {
-        text: "Earnings by educational attainment",
+        text: "Life expectancy by county",
     },
     plotOptions: {
         column: {
@@ -35,27 +35,24 @@
     },
     yAxis: {
         title: {
-            text: "Median usual weekly earnings in USD",
+            text: "Average life expectancy in years",
         },
     },
     series: [
         {
-            color: "black",
-            name: "Earnings in USD",
+            color: "#34495e",
+            name: "Average life expectancy in years",
             data: [
-                { name: "Doctoral degree", y: 2083 },
-                { name: "Professional degree", y: 2080 },
-                { name: "Master’s degree", y: 1661 },
-                { name: "Bachelor’s degree", y: 1432 },
-                { name: "Associate’s degree", y: 1005 },
-                { name: "Some college, no degree", y: 935 },
-                { name: "High school diploma", y: 853 },
-                { name: "Less than a high school diploma", y: 682 },
+                { name: "Manhattan", y: 83.3 },
+                { name: "Tompkins", y: 80.9 },
+                { name: "Westchester", y: 82.1 },
+                { name: "Chenango", y: 76.6, color: "#8c0d0b" },
+                { name: "Wyoming", y: 78.9, color: "#8c0d0b" },
+                { name: "Orleans", y: 77.5, color: "#8c0d0b" },
             ],
         },
     ],
 };
-
 </script>
 
 <div>
@@ -67,9 +64,9 @@
         {/snippet}
         {#snippet scrolly()}
              <ArticleText>
-                Behind this disparity is a gap in educational attainment. Adults with advanced degrees generally have higher salaries, which gives them access to high-cost-of-living areas. 
+                Whether they become a finance bro/girlie in Manhattan, buy a cute suburban home by the Hudson in Westchester, or teach at Cornell in Tompkins, they’re likely to enjoy smoke-free environments, a wider range of nutritious food options, and walkable communities—all of which contribute to longer life expectancy.
                 <br /><br />
-                Source: <a href="https://www.bls.gov/careeroutlook/2023/data-on-display/education-pays.htm">U.S. Bureau of Labor Statistics</a>
+                Source: <a href="https://www.cdc.gov/nchs/nvss/usaleep/usaleep.html">Centers for Disease Control and Prevention - National Center for Health Statistics</a>
             </ArticleText>
         {/snippet}
     </Scroller>
